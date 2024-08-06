@@ -68,9 +68,10 @@ spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-
   <img src="./results_toucan.png" width="50%" height="50%" align="centre">
 </div>
 
-<div align="center">
+
 We compare the performance of Toucan with Aya (Üstün et al., 2024). We use results for Aya as they appear in the paper, hence, we do not compute spBLEU1k results in this analysis. Although Aya is a 13B parameter model, significantly larger than Toucan 3.7B, we report better performance in 16 of 28 pairs.
 
+<div align="center">
 <img src="./aya-vs-toucan.png" width="50%" height="50%" align="centre">
 </div>
 
