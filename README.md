@@ -50,7 +50,7 @@ translation for African languages, offering greater capacities in handling the r
 
 ## 2. AfroNLG Benchmark and Evaluation
 
-
+<img src="./benchmark_MT.png" width="50%" height="50%" align="right">
 #  3. How to use Cheetah model
 
 Below is an example for using **Cheetah** predict masked tokens. 
