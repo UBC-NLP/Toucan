@@ -52,7 +52,10 @@ translation for African languages, offering greater capacities in handling the r
 
 Our collection comprises data from a total of 43 datasets, encompassing 84 unique language pairs derived from 46 different languages. We also develop a new manually translated dataset useful for evaluation in the government domain. In all, the data cover 43 African languages from five language families domiciled in 29 African countries. We also include Arabic, English, and French, since these are widely spoken in Africa. 
 
+<p align="center">
 <img src="./benchmark_MT.png" width="50%" height="50%" align="right">
+</p>
+
 
 
 #  3. How to use Cheetah model
