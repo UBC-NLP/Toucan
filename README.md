@@ -60,6 +60,11 @@ Our collection comprises data from a total of 43 datasets, encompassing 84 uniqu
 
 ## 2.1 Results
 
+<p align="center">
+ 
+<img src="./results_toucan.png" width="50%" height="50%" align="right">
+
+</p>
 
 #  3. How to use Cheetah model
 
