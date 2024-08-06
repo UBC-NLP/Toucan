@@ -54,7 +54,7 @@ Our collection comprises data from a total of 43 datasets, encompassing 84 uniqu
 
 <div align="center">
  
-<img src="./benchmark_MT.png" width="50%" height="50%" align="right">
+<img src="./benchmark_MT.png" width="50%" height="50%" align="centre">
 
 </div>
 
@@ -65,7 +65,7 @@ spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-
 ## 2.2 Results
 
 <div align="center">
-  <img src="./results_toucan.png" width="50%" height="50%" align="right">
+  <img src="./results_toucan.png" width="50%" height="50%" align="centre">
 </div>
 
 #  3. How to use Cheetah model
