@@ -49,21 +49,18 @@ translation for African languages, offering greater capacities in handling the r
 | 🔥**Cheetah-3.7B**🔥: MT5-Xlarge model|     [https://huggingface.co/UBC-NLP/cheetah-base](https://huggingface.co/UBC-NLP/cheetah-base)| 
 
 ## 2. AfroLingu-MT Benchmark
-
-<p align="center">
  
 Our collection comprises data from a total of 43 datasets, encompassing 84 unique language pairs derived from 46 different languages. We also develop a new manually translated dataset useful for evaluation in the government domain. In all, the data cover 43 African languages from five language families domiciled in 29 African countries. We also include Arabic, English, and French, since these are widely spoken in Africa. Table 2 shows the different datasets that AfroLingu-MT consists of.
 
+<p align="center">
+ 
 <img src="./benchmark_MT.png" width="50%" height="50%" align="right">
 
 </p>
 
 ## 2.1 spBLEU_1K Metric
 
-<p align="center">
 spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-MT benchmark. To address this limitation, we adopt a methodology similar to that of Goyal et al. (2022). Namely, we develop a new SentencePiece tokenizer that utilizes 1000+ monolingual data sources. We collect monolingual data covering 1,003 languages, including 614 African languages, 53 Indigenous American languages, and the remainder spanning the most resource-rich languages world-wide. 
-</p>
-
 
 ## 2.2 Results
 
