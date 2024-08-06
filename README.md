@@ -63,6 +63,9 @@ Our collection comprises data from a total of 43 datasets, encompassing 84 uniqu
 spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-MT benchmark. To address this limitation, we adopt a methodology similar to that of Goyal et al. (2022). Namely, we develop a new SentencePiece tokenizer that utilizes 1000+ monolingual data sources. We collect monolingual data covering 1,003 languages, including 614 African languages, 53 Indigenous American languages, and the remainder spanning the most resource-rich languages world-wide. 
 
 ## 2.2 Results
+we present the performance outcomes of our proposed models as well as the baseline models each evaluated independently on the AfroLingu-MT benchmark. This evaluation employs three pertinent metrics specific to machine translation. These metrics are: spBLEU_1K, SentencePiece BLEU (i.e., spBLEU) (Goyal et al., 2022), word-based Character n-gram F-score (i.e., ChrF++) (Popovi ́c, 2015b), and AfriCOMET (Wang et al., 2023). These metrics have been selected for their effectiveness in assessing the quality of machine translations from various perspectives, including lexical accuracy and fluency. 
+
+Additionally, we compare our model, Toucan-1.2B, to the Facebook’s NLLB model (Team et al.,2022; Costa-jussà et al., 2022). Again, we find Toucan-1.2B outperforming NLLB-200-1.3B by 6.96 points in spBLEU1K, as shown in Table 5.
 
 <div align="center">
   <img src="./results_toucan.png" width="50%" height="50%" align="centre">
@@ -99,14 +102,14 @@ Decoded output:  ìpínlẹ̀
 ```
 
 ## 4. Ethics
-Cheetah aligns with Afrocentric NLP where the needs of African people is put into consideration when developing technology. We believe Cheetah will not only be useful to speakers of the languages supported, but also researchers of African languages such as anthropologists and linguists.
-We discuss below some use cases for Cheetah and offer a number of broad impacts. 
-- Cheetah aims to address the lack of access to technology in about 90% of the world's languages, which automatically discriminates against native speakers of those languages. More precisely, it does so by focusing on Africa.
-  To the best of our knowledge, Cheetah is the first massively multilingual PLM developed for African languages and language varieties. A model with knowledge of <b>517 African languages</b>, is by far the largest to date for African NLP. 
-- Cheetah enables improved access of important information to the African community in Indigenous African languages. This is especially beneficial for people who may not be fluent in other languages. This will potentially connect more people globally. 
-- Cheetah affords opportunities for language preservation for many African languages. To the best of our knowledge, Cheetah consists of languages that have not been used for any NLP task until now.
+Toucan aligns with Afrocentric NLP where the needs of African people is put into consideration when developing technology. We believe Toucan will not only be useful to speakers of the languages supported, but also researchers of African languages such as anthropologists and linguists.
+We discuss below some use cases for Toucan and offer a number of broad impacts. 
+- Toucan aims to address the lack of access to technology in about 90% of the world's languages, which automatically discriminates against native speakers of those languages. More precisely, it does so by focusing on Africa.
+  To the best of our knowledge, Toucan is the first massively multilingual PLM developed for African languages and language varieties. A model with knowledge of <b>517 African languages</b>, is by far the largest to date for African NLP. 
+- Toucan enables improved access of important information to the African community in Indigenous African languages. This is especially beneficial for people who may not be fluent in other languages. This will potentially connect more people globally. 
+- Toucan affords opportunities for language preservation for many African languages. To the best of our knowledge, Toucan consists of languages that have not been used for any NLP task until now.
   We believe that it can help encourage  continued use of these languages in several domains, as well as trigger future development of language technologies for many of these languages.
-- Cheetah Although LMs are useful for a wide range of applications, they can also be misused. Cheetah is developed using publicly available datasets that may carry biases.
+- Although LMs are useful for a wide range of applications, they can also be misused. Toucan is developed using publicly available datasets that may carry biases.
   Although we strive to perform analyses and diagnostic case studies to probe performance of our models, our investigations are by no means comprehensive nor guarantee absence of bias in the data.
   In particular, we do not have access to native speakers of most of the languages covered. This hinders our ability to investigate samples from each (or at least the majority) of the languages.
      
