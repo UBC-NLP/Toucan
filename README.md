@@ -58,10 +58,14 @@ Our collection comprises data from a total of 43 datasets, encompassing 84 uniqu
 
 </p>
 
-## 2.1 Results
+## 2.1 spBLEU_1K Metric
+
+spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-MT benchmark. To address this limitation, we adopt a methodology similar to that of Goyal et al. (2022). Namely, we develop a new SentencePiece tokenizer that utilizes 1000+ monolingual data sources. We collect monolingual data covering 1,003 languages, including 614 African languages, 53 Indigenous American languages, and the remainder spanning the most resource-rich languages world-wide. 
+
+## 2.2 Results
 
 <p align="center">
- 
+
 <img src="./results_toucan.png" width="50%" height="50%" align="right">
 
 </p>
