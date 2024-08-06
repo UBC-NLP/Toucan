@@ -66,6 +66,7 @@ spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-
 
 <div align="center">
   <img src="./results_toucan.png" width="50%" height="50%" align="centre">
+ <img src="./aya_vs_toucan.png" width="50%" height="50%" align="centre">
 </div>
 
 #  3. How to use Cheetah model
