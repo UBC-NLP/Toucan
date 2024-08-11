@@ -7,8 +7,14 @@
 </p>
  
 <img src="./toucan_langs_1.png" width="50%" height="50%" align="right">
+
 <div style='text-align: justify;'>
+
+  
+This is the repository accompanying our ACL 2024 paper [Toucan: Many-to-Many Translation for 150 African Language Pairs](https://arxiv.org/abs/2407.04796). 
 We address a notable gap in Natural Language Processing (NLP) by introducing a collection of resources designed to improve Machine Translation (MT) for low-resource languages, with a specific focus on African languages. First, We introduce two language models (LMs), Cheetah-1.2B and Cheetah-3.7B, with 1.2 billion and 3.7 billion parameters respectively. Next, we finetune the aforementioned models to create Toucan, an Afrocentric machine translation model designed to support 156 African language pairs. To evaluate Toucan, we carefully develop an extensive machine translation benchmark, dubbed AfroLingu-MT, tailored for evaluating machine translation. Toucan significantly outperforms other models, showcasing its remarkable performance on MT for African languages. Finally, we train a new model, spBLEU_1K, to enhance translation evaluation metrics, covering 1K languages, including 614 African languages. This work aims to advance the field of NLP, fostering cross-cultural understanding and knowledge exchange, particularly in regions with limited language resources such as Africa. 
+
+</div>
 
 ## Table of Contents
 - [1 Our Language Models](#1-Our-Language-Models)
@@ -43,10 +49,10 @@ To effectively train a MT language model for African languages, it is crucial to
 2024), a recently introduced SoTA model with extensive coverage encompassing 517 African languages. One limitation of Cheetah, however, is that it is available only in a base architecture, featuring
 580M parameters. Given our objective to develop a large-scale language model for machine translation capabale of serving 156 directions, this base model does not fully meet our requirements. To address this limitation, we embark on training larger and more expansive Afrocentric sequence-to-sequence models. We focus on two sizes: one model with 1.2B parameters and another with 3.7B parameters. We refer to the new models “Cheetah-1.2B” and “Cheetah-3.7B”, respectively, to reflect their enhanced capabilities and parameter scale. These models represent a significant advancement in our efforts to improve machine
 translation for African languages, offering greater capacities in handling the rich linguistic nuances of African languages. Cheetah Pertaining. To train the new Cheetah models, we utilize the same pre-training dataset employed in training the original Cheetah-base model (Adebara et al., 2024). This strategic choice ensures consistency in the foundational data across models, enabling the advanced Cheetah-1.2B and Cheetah-3.7B versions to build upon the rich linguistic diversity captured in the original dataset. We refer to (Adebara et al., 2024) for more information about the pretraining data of Cheetah models. We employ a learning rate of 0.01, a batch size of 1, 024 sequences, and a maximum sequence length of 1, 024. Each model undergoes pretraining for 1 million steps. The training process is conducted on Google Cloud TPU with 128 cores (v3 − 128) provided by the TensorFlow Research Cloud (TFRC). We provide additional details on pretraining in Section B in the Appendix.
-| **Model**   | **Link** | 
-|---------|:------------------:|    
-| 🔥**Cheetah-1.2B**🔥: MT5-large model|     [https://huggingface.co/UBC-NLP/cheetah-base](https://huggingface.co/UBC-NLP/cheetah-base)   
-| 🔥**Cheetah-3.7B**🔥: MT5-Xlarge model|     [https://huggingface.co/UBC-NLP/cheetah-base](https://huggingface.co/UBC-NLP/cheetah-base)| 
+
+| 🔥**Cheetah-base**🔥|     [https://huggingface.co/UBC-NLP/cheetah-base](https://huggingface.co/UBC-NLP/cheetah-base) 
+| 🔥**Cheetah-1.2B**🔥|     [https://huggingface.co/UBC-NLP/cheetah-1.2B](https://huggingface.co/UBC-NLP/cheetah-1.2B)   
+| 🔥**Cheetah-3.7B**🔥|    TBA
 
 # 2. AfroLingu-MT Benchmark
  
@@ -114,11 +120,27 @@ We discuss below some use cases for Toucan and offer a number of broad impacts.
   In particular, we do not have access to native speakers of most of the languages covered. This hinders our ability to investigate samples from each (or at least the majority) of the languages.
      
 ## Supported languages
-Please refer to [**supported-languages**](supported-languages.txt)
+Please refer to [**supported-languages**]("https://github.com/UBC-NLP/Cheetah/blob/main/supported-languages.txt")
+
+More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah paper GitHub**]("https://github.com/UBC-NLP/Cheetah")
 
 ## Citation
-If you use the pre-trained model (Cheetah) for your scientific publication, or if you find the resources in this repository useful, please cite our paper as follows (to be updated):
+If you use the pre-trained model (Cheetah-1.2B) for your scientific publication, or if you find the resources in this repository useful, please cite our papers as follows (to be updated):
 
+**Toucan's Paper**
+```
+@misc{elmadany2024toucan,
+      title={Toucan: Many-to-Many Translation for 150 African Language Pairs}, 
+      author={AbdelRahim Elmadany and Ife Adebara and Muhammad Abdul-Mageed},
+      year={2024},
+      eprint={2407.04796},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2407.04796}, 
+}
+```
+
+**Cheetah's Paper**
 ```
 @misc{adebara2024cheetah,
       title={Cheetah: Natural Language Generation for 517 African Languages}, 
