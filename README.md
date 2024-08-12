@@ -127,28 +127,44 @@ More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah 
 ## Citation
 If you use the pre-trained model (Cheetah-1.2B) for your scientific publication, or if you find the resources in this repository useful, please cite our papers as follows (to be updated):
 
+
 **Toucan's Paper**
 ```
-@misc{elmadany2024toucan,
-      title={Toucan: Many-to-Many Translation for 150 African Language Pairs}, 
-      author={AbdelRahim Elmadany and Ife Adebara and Muhammad Abdul-Mageed},
-      year={2024},
-      eprint={2407.04796},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2407.04796}, 
+@inproceedings{adebara-etal-2024-cheetah,
+    title = "Cheetah: Natural Language Generation for 517 {A}frican Languages",
+    author = "Adebara, Ife  and
+      Elmadany, AbdelRahim  and
+      Abdul-Mageed, Muhammad",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand and virtual meeting",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.691",
+    pages = "12798--12823",
 }
 ```
 
 **Cheetah's Paper**
 ```
-@misc{adebara2024cheetah,
-      title={Cheetah: Natural Language Generation for 517 African Languages}, 
-      author={Ife Adebara and AbdelRahim Elmadany and Muhammad Abdul-Mageed},
-      year={2024},
-      eprint={2401.01053},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{elmadany-etal-2024-toucan,
+    title = "Toucan: Many-to-Many Translation for 150 {A}frican Language Pairs",
+    author = "Elmadany, AbdelRahim  and
+      Adebara, Ife  and
+      Abdul-Mageed, Muhammad",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Findings of the Association for Computational Linguistics ACL 2024",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand and virtual meeting",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-acl.781",
+    pages = "13189--13206",
 }
 ```
 
