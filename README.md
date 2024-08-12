@@ -11,7 +11,7 @@
 <div style='text-align: justify;'>
 
   
-This is the repository accompanying our ACL 2024 paper [Toucan: Many-to-Many Translation for 150 African Language Pairs](https://arxiv.org/abs/2407.04796). 
+This is the repository accompanying our ACL 2024 paper [Toucan: Many-to-Many Translation for 150 African Language Pairs](https://aclanthology.org/2024.findings-acl.781/). 
 We address a notable gap in Natural Language Processing (NLP) by introducing a collection of resources designed to improve Machine Translation (MT) for low-resource languages, with a specific focus on African languages. First, We introduce two language models (LMs), Cheetah-1.2B and Cheetah-3.7B, with 1.2 billion and 3.7 billion parameters respectively. Next, we finetune the aforementioned models to create Toucan, an Afrocentric machine translation model designed to support 156 African language pairs. To evaluate Toucan, we carefully develop an extensive machine translation benchmark, dubbed AfroLingu-MT, tailored for evaluating machine translation. Toucan significantly outperforms other models, showcasing its remarkable performance on MT for African languages. Finally, we train a new model, spBLEU_1K, to enhance translation evaluation metrics, covering 1K languages, including 614 African languages. This work aims to advance the field of NLP, fostering cross-cultural understanding and knowledge exchange, particularly in regions with limited language resources such as Africa. 
 
 </div>
