@@ -50,9 +50,18 @@ To effectively train a MT language model for African languages, it is crucial to
 580M parameters. Given our objective to develop a large-scale language model for machine translation capabale of serving 156 directions, this base model does not fully meet our requirements. To address this limitation, we embark on training larger and more expansive Afrocentric sequence-to-sequence models. We focus on two sizes: one model with 1.2B parameters and another with 3.7B parameters. We refer to the new models “Cheetah-1.2B” and “Cheetah-3.7B”, respectively, to reflect their enhanced capabilities and parameter scale. These models represent a significant advancement in our efforts to improve machine
 translation for African languages, offering greater capacities in handling the rich linguistic nuances of African languages. Cheetah Pertaining. To train the new Cheetah models, we utilize the same pre-training dataset employed in training the original Cheetah-base model (Adebara et al., 2024). This strategic choice ensures consistency in the foundational data across models, enabling the advanced Cheetah-1.2B and Cheetah-3.7B versions to build upon the rich linguistic diversity captured in the original dataset. We refer to (Adebara et al., 2024) for more information about the pretraining data of Cheetah models. We employ a learning rate of 0.01, a batch size of 1, 024 sequences, and a maximum sequence length of 1, 024. Each model undergoes pretraining for 1 million steps. The training process is conducted on Google Cloud TPU with 128 cores (v3 − 128) provided by the TensorFlow Research Cloud (TFRC). We provide additional details on pretraining in Section B in the Appendix.
 
+
+| **Cheetah Models**   | **Link** | 
+|---------|:------------------:|    
 | 🔥**Cheetah-base**🔥|     [https://huggingface.co/UBC-NLP/cheetah-base](https://huggingface.co/UBC-NLP/cheetah-base) 
 | 🔥**Cheetah-1.2B**🔥|     [https://huggingface.co/UBC-NLP/cheetah-1.2B](https://huggingface.co/UBC-NLP/cheetah-1.2B)   
 | 🔥**Cheetah-3.7B**🔥|    TBA
+
+| **Tocan Models**   | **Link** | 
+|---------|:------------------:|    
+| 🔥**Toucan-base**🔥|     [https://huggingface.co/UBC-NLP/toucan-base](https://huggingface.co/UBC-NLP/toucan-base) 
+| 🔥**Toucan-1.2B**🔥|     [https://huggingface.co/UBC-NLP/toucan-1.2B](https://huggingface.co/UBC-NLP/toucan-1.2B)   
+| 🔥**Toucan-3.7B**🔥|    TBA
 
 # 2. AfroLingu-MT Benchmark
  
@@ -86,26 +95,6 @@ We compare the performance of Toucan with Aya (Üstün et al., 2024). We use res
 
 #  3. How to use Cheetah model
 
-Below is an example for using **Cheetah** predict masked tokens. 
-``` bash
-from transformers import T5Tokenizer, AutoModelForSeq2SeqLM
-
-tokenizer = T5Tokenizer.from_pretrained("UBC-NLP/cheetah-base")
-model = AutoModelForSeq2SeqLM.from_pretrained("UBC-NLP/cheetah-base")
-
-yor_prompt="ìròyìn kan nípa owó ìjọba <extra_id_0> kan"
-
-input_ids = tokenizer(yor_prompt, return_tensors="pt").input_ids
-outputs = model.generate(input_ids)
-print("Tokenized input:", tokenizer.tokenize(yor_prompt))
-print("Decoded output:", tokenizer.decode(outputs[0], skip_special_tokens=True))
-
-```
-Output:
-```bash
-Tokenized input: ['▁ìròyìn', '▁kan', '▁nípa', '▁owó', '▁ìjọba', '<extra_id_0>', '▁kan']
-Decoded output:  ìpínlẹ̀
-```
 
 ## 4. Ethics
 Toucan aligns with Afrocentric NLP where the needs of African people is put into consideration when developing technology. We believe Toucan will not only be useful to speakers of the languages supported, but also researchers of African languages such as anthropologists and linguists.
