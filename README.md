@@ -75,7 +75,7 @@ Our collection comprises data from a total of 43 datasets, encompassing 84 uniqu
 
 spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-MT benchmark. To address this limitation, we adopt a methodology similar to that of Goyal et al. (2022). Namely, we develop a new SentencePiece tokenizer that utilizes 1000+ monolingual data sources. We collect monolingual data covering 1,003 languages, including 614 African languages, 53 Indigenous American languages, and the remainder spanning the most resource-rich languages world-wide. 
 
-- More details about spBLEU<sup>1K</sup> traning data and usage, (click here.)[https://github.com/UBC-NLP/Toucan/tree/main/spBLEU-1K]
+- More details about spBLEU<sup>1K</sup> traning data and usage, [click here](https://github.com/UBC-NLP/Toucan/tree/main/spBLEU-1K)
 
 ## 2.2 Results
 we present the performance outcomes of our proposed models as well as the baseline models each evaluated independently on the AfroLingu-MT benchmark. This evaluation employs three pertinent metrics specific to machine translation. These metrics are: spBLEU_1K, SentencePiece BLEU (i.e., spBLEU) (Goyal et al., 2022), word-based Character n-gram F-score (i.e., ChrF++) (Popovi ́c, 2015b), and AfriCOMET (Wang et al., 2023). These metrics have been selected for their effectiveness in assessing the quality of machine translations from various perspectives, including lexical accuracy and fluency. 
