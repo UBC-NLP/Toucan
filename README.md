@@ -93,8 +93,101 @@ We compare the performance of Toucan with Aya (Üstün et al., 2024). We use res
 <img src="./aya-vs-toucan.png" width="50%" height="50%" align="centre">
 </div>
 
-#  3. How to use Cheetah model
+##  3 How to use Cheetah-1.2B model
 
+Below is an example for using **Cheetah-1.2B** predict masked tokens. 
+``` bash
+from transformers import T5Tokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = T5Tokenizer.from_pretrained("UBC-NLP/cheetah-1.2B")
+model = AutoModelForSeq2SeqLM.from_pretrained("UBC-NLP/cheetah-1.2B")
+
+yor_prompt="ìròyìn kan nípa owó ìjọba <extra_id_0> kan"
+
+input_ids = tokenizer(yor_prompt, return_tensors="pt").input_ids
+outputs = model.generate(input_ids)
+print("Cheetah-1.2B - Tokenized input:", tokenizer.tokenize(yor_prompt))
+print("Cheetah-1.2B - Decoded output:", tokenizer.decode(outputs[0], skip_special_tokens=True))
+
+```
+Output:
+```bash
+Cheetah-1.2B - Tokenized input: ['▁ìròyìn', '▁kan', '▁nípa', '▁owó', '▁ìjọba', '<extra_id_0>', '▁kan']
+Cheetah-1.2B - Decoded output: Nàìjíríà
+```
+
+##  3.1 How to use Toucan model
+To translate using Toucan models, use the target language ISO-3 code as preix. Below the supported langauges
+```
+lang_names={
+    "aar": "Afar",
+    "ach": "Acholi",
+    "afr": "Afrikaans",
+    "aka": "Akan",
+    "amh": "Amharic",
+    "bam": "Bambara",
+    "bas": "Basaa",
+    "bem": "Bemba",
+    "btg": "Bete Gagnoa",
+    "eng": "English",
+    "ewe": "Ewe",
+    "fon": "Fon",
+    "fra": "French",
+    "hau": "Hausa",
+    "ibo": "Igbo",
+    "kbp": "Kabiye",
+    "lgg": "Lugbara",
+    "lug": "Luganda",
+    "mlg": "Malagasy",
+    "nyn": "Nyakore",
+    "orm": "Oromo",
+    "som": "Somali",
+    "sot": "Sesotho",
+    "swa": "Swahili",
+    "tir": "Tigrinya",
+    "yor": "Yoruba",
+    "teo": "Ateso",
+    "gez": "Geez",
+    "wal": "Wolaytta",
+    "fan": "Fang",
+    "kau": "Kanuri",
+    "kin": "Kinyawanda",
+    "kon": "Kongo",
+    "lin": "Lingala",
+    "nya": "Chichewa",
+    "pcm": "Nigerian Pidgin",
+    "ssw": "Siswati",
+    "tsn": "Setswana",
+    "tso": "Tsonga",
+    "twi": "Twi",
+    "wol": "Wolof",
+    "xho": "Xhosa",
+    "zul": "Zulu",
+    "nnb": "Nande",
+    "swc": "Swahili Congo",
+    "ara": "Arabic"
+}
+```
+Below is an example for translating using **Toucan-1.2B**. 
+``` bash
+from transformers import AutoTokenizer, MT5ForConditionalGeneration
+import torch
+tokenizer = AutoTokenizer.from_pretrained("UBC-NLP/toucan-1.2B")
+model = MT5ForConditionalGeneration.from_pretrained("UBC-NLP/toucan-1.2B", torch_dtype=torch.float16, device_map="auto")
+model.eval()
+
+#Translate from Enlglish to Zulu
+text="zul: Clear all items from the recent documents list"
+input_ids = tokenizer(text, return_tensors="pt", max_length=1024, truncation=True).to("cuda:0")
+with torch.no_grad():
+    generated_ids = model.generate(**input_ids, num_beams=5, max_new_tokens=len(text), do_sample=True, temperature=0.6, top_p=0.9)
+print("Toucan-1.2B - translation:", tokenizer.batch_decode(generated_ids, skip_special_tokens=True,  skip_prompt=True)[0])
+
+```
+Output:
+```bash
+Toucan-1.2B - translation: Susa zonke izinto kuhlu lwamadokhumende oludlule
+```
 
 ## 4. Ethics
 Toucan aligns with Afrocentric NLP where the needs of African people is put into consideration when developing technology. We believe Toucan will not only be useful to speakers of the languages supported, but also researchers of African languages such as anthropologists and linguists.
