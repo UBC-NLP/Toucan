@@ -114,7 +114,7 @@ Please refer to [**supported-languages**]("https://github.com/UBC-NLP/Cheetah/bl
 More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah paper GitHub**]("https://github.com/UBC-NLP/Cheetah")
 
 ## Citation
-If you use the pre-trained model (Cheetah-1.2B) for your scientific publication, or if you find the resources in this repository useful, please cite our papers as follows (to be updated):
+If you use the pre-trained model (Cheetah-1.2B) for your scientific publication, or if you find the resources in this repository useful, please cite our papers as follows:
 
 
 **Toucan's Paper**

@@ -52,3 +52,28 @@ print(round(results["score"], 1))
 # 41.5
 
 ```
+
+
+## Citation
+If you use the spBLEU<sup>1K</sup> model for your scientific publication, or if you find the resources in this repository useful, please cite our paper as follows:
+
+
+**Toucan's Paper**
+```
+@inproceedings{adebara-etal-2024-cheetah,
+    title = "Cheetah: Natural Language Generation for 517 {A}frican Languages",
+    author = "Adebara, Ife  and
+      Elmadany, AbdelRahim  and
+      Abdul-Mageed, Muhammad",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand and virtual meeting",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.691",
+    pages = "12798--12823",
+}
+```
