@@ -117,7 +117,7 @@ More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah 
 If you use the pre-trained model (Cheetah-1.2B) for your scientific publication, or if you find the resources in this repository useful, please cite our papers as follows:
 
 
-**Toucan's Paper**
+**Cheetah's Paper** 
 ```
 @inproceedings{adebara-etal-2024-cheetah,
     title = "Cheetah: Natural Language Generation for 517 {A}frican Languages",
@@ -137,7 +137,7 @@ If you use the pre-trained model (Cheetah-1.2B) for your scientific publication,
 }
 ```
 
-**Cheetah's Paper**
+**Toucan's Paper**
 ```
 @inproceedings{elmadany-etal-2024-toucan,
     title = "Toucan: Many-to-Many Translation for 150 {A}frican Language Pairs",
