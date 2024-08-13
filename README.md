@@ -55,13 +55,11 @@ translation for African languages, offering greater capacities in handling the r
 |---------|:------------------:|    
 | 🔥**Cheetah-base**🔥|     [https://huggingface.co/UBC-NLP/cheetah-base](https://huggingface.co/UBC-NLP/cheetah-base) 
 | 🔥**Cheetah-1.2B**🔥|     [https://huggingface.co/UBC-NLP/cheetah-1.2B](https://huggingface.co/UBC-NLP/cheetah-1.2B)   
-| 🔥**Cheetah-3.7B**🔥|    TBA
 
 | **Tocan Models**   | **Link** | 
 |---------|:------------------:|    
 | 🔥**Toucan-base**🔥|     [https://huggingface.co/UBC-NLP/toucan-base](https://huggingface.co/UBC-NLP/toucan-base) 
 | 🔥**Toucan-1.2B**🔥|     [https://huggingface.co/UBC-NLP/toucan-1.2B](https://huggingface.co/UBC-NLP/toucan-1.2B)   
-| 🔥**Toucan-3.7B**🔥|    TBA
 
 # 2. AfroLingu-MT Benchmark
  
@@ -73,14 +71,16 @@ Our collection comprises data from a total of 43 datasets, encompassing 84 uniqu
 
 </div>
 
-## 2.1 spBLEU_1K Metric
+## 2.1 spBLEU<sup>1K</sup> Metric
 
 spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-MT benchmark. To address this limitation, we adopt a methodology similar to that of Goyal et al. (2022). Namely, we develop a new SentencePiece tokenizer that utilizes 1000+ monolingual data sources. We collect monolingual data covering 1,003 languages, including 614 African languages, 53 Indigenous American languages, and the remainder spanning the most resource-rich languages world-wide. 
+
+- More details about spBLEU<sup>1K</sup> traning data and usage, (click here.)[https://github.com/UBC-NLP/Toucan/tree/main/spBLEU-1K]
 
 ## 2.2 Results
 we present the performance outcomes of our proposed models as well as the baseline models each evaluated independently on the AfroLingu-MT benchmark. This evaluation employs three pertinent metrics specific to machine translation. These metrics are: spBLEU_1K, SentencePiece BLEU (i.e., spBLEU) (Goyal et al., 2022), word-based Character n-gram F-score (i.e., ChrF++) (Popovi ́c, 2015b), and AfriCOMET (Wang et al., 2023). These metrics have been selected for their effectiveness in assessing the quality of machine translations from various perspectives, including lexical accuracy and fluency. 
 
-Additionally, we compare our model, Toucan-1.2B, to the Facebook’s NLLB model (Team et al.,2022; Costa-jussà et al., 2022). Again, we find Toucan-1.2B outperforming NLLB-200-1.3B by 6.96 points in spBLEU1K, as shown in Table 5.
+Additionally, we compare our model, Toucan-1.2B, to the Facebook’s NLLB model (Team et al.,2022; Costa-jussà et al., 2022). Again, we find Toucan-1.2B outperforming NLLB-200-1.3B by 6.96 points in spBLEU<sup>1K</sup>, as shown in Table 5.
 
 <div align="center">
   <img src="./results_toucan.png" width="50%" height="50%" align="centre">
