@@ -17,7 +17,7 @@ We integrate this newly created SPM into SacreBLEU, resulting in the formulation
 ## Getting Start
 ### Install requirments 
 
-- Installing a custom version of sacreBLEU that supports the spBLEU<sup>1K</sup> tokenizer.
+- Installing the integrated version of sacreBLEU that supports the spBLEU<sup>1K</sup> tokenizer.
 
 ``` bash
     git clone https://github.com/UBC-NLP/Toucan.git
