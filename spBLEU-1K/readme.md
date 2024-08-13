@@ -42,16 +42,20 @@ metric = evaluate.load("sacrebleu")
 predictions = ["ወንድሞች ሆይ፥ በዚህ ዓለም እንግዶችና እንግዶች እንደ መሆናችሁ መጠን፥ ሁልጊዜ እርስ በርሳችሁ ከሚዋጋ ሥጋዊ ምኞት ርሰት እንዳትወድቁ እለምናችኋለሁ።"]
 references = [["ወዳጆች ሆይ፥ ነፍስን ከሚዋጋ ሥጋዊ ምኞት ትርቁ ዘንድ እንግዶችና መጻተኞች እንደ መሆናችሁ እለምናችኋለሁ፤"]]
 
+#Score using the default sacreBLEU tokenizer (mosestokenizer).
+results = metric.compute(predictions=predictions, references=references)
+print("sacreBLEU score = ", round(results["score"], 1))
+# sacreBLEU score =  10.9
 
 #Score using the default SentencePiece tokenizer (spBLEU).
 results = metric.compute(tokenize="spm", predictions=predictions, references=references)
-print(round(results["score"], 1))
-# 33.6
+print("spBLEU score = ", round(results["score"], 1))
+# spBLEU score =  33.6
 
 #Score using the spBLEU-1K SentencePiece tokenizer.
 results = metric.compute(tokenize="spBLEU-1K", predictions=predictions, references=references)
-print(round(results["score"], 1))
-# 41.5
+print("spBLEU-1K score = ", round(results["score"], 1))
+# spBLEU-1K score =  41.5
 
 ```
 
