@@ -34,14 +34,21 @@ We integrate this newly created SPM into SacreBLEU, resulting in the formulation
 
 ``` python
 import evaluate
-predictions = ["hello there general kenobi", "foo bar foobar"]
-references = [["hello there general kenobi", "hello there !"],["foo bar foobar", "foo bar foobar"]]
 metric = evaluate.load("sacrebleu")
+
+
+predictions = ["ወንድሞች ሆይ፥ በዚህ ዓለም እንግዶችና እንግዶች እንደ መሆናችሁ መጠን፥ ሁልጊዜ እርስ በርሳችሁ ከሚዋጋ ሥጋዊ ምኞት ርሰት እንዳትወድቁ እለምናችኋለሁ።"]
+references = [["ወዳጆች ሆይ፥ ነፍስን ከሚዋጋ ሥጋዊ ምኞት ትርቁ ዘንድ እንግዶችና መጻተኞች እንደ መሆናችሁ እለምናችኋለሁ፤"]]
+
+
+#Score using the default SentencePiece tokenizer (spBLEU).
+results = metric.compute(tokenize="spm", predictions=predictions, references=references)
+print(round(results["score"], 1))
+# 33.6
 
 #Score using the spBLEU-1K SentencePiece tokenizer.
 results = metric.compute(tokenize="spBLEU-1K", predictions=predictions, references=references)
-print(list(results.keys()))
-# ['score', 'counts', 'totals', 'precisions', 'bp', 'sys_len', 'ref_len']
 print(round(results["score"], 1))
-# 100.0
+# 41.5
+
 ```
