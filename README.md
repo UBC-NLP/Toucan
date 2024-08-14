@@ -20,7 +20,7 @@ We address a notable gap in Natural Language Processing (NLP) by introducing a c
 
 </div>
 
-# 1. Our Language Models
+## Our Language Models
 To effectively train a MT language model for African languages, it is crucial to start with a powerful, Afrocentric pretrained language model. For this purpose, we select Cheetah (Adebara et al.,
 2024), a recently introduced SoTA model with extensive coverage encompassing 517 African languages. One limitation of Cheetah, however, is that it is available only in a base architecture, featuring
 580M parameters. Given our objective to develop a large-scale language model for machine translation capabale of serving 156 directions, this base model does not fully meet our requirements. To address this limitation, we embark on training larger and more expansive Afrocentric sequence-to-sequence models. We focus on two sizes: one model with 1.2B parameters and another with 3.7B parameters. We refer to the new models “Cheetah-1.2B” and “Cheetah-3.7B”, respectively, to reflect their enhanced capabilities and parameter scale. These models represent a significant advancement in our efforts to improve machine
@@ -34,12 +34,8 @@ More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah 
 | 🔥**Cheetah-base**🔥|     [https://huggingface.co/UBC-NLP/cheetah-base](https://huggingface.co/UBC-NLP/cheetah-base) 
 | 🔥**Cheetah-1.2B**🔥|     [https://huggingface.co/UBC-NLP/cheetah-1.2B](https://huggingface.co/UBC-NLP/cheetah-1.2B)   
 
-| **Tocan Models**   | **Link** | 
-|---------|:------------------:|    
-| 🔥**Toucan-base**🔥|     [https://huggingface.co/UBC-NLP/toucan-base](https://huggingface.co/UBC-NLP/toucan-base) 
-| 🔥**Toucan-1.2B**🔥|     [https://huggingface.co/UBC-NLP/toucan-1.2B](https://huggingface.co/UBC-NLP/toucan-1.2B)   
 
-# 2. AfroLingu-MT Benchmark
+## AfroLingu-MT Benchmark
  
 Our collection comprises data from a total of 43 datasets, encompassing 84 unique language pairs derived from 46 different languages. We also develop a new manually translated dataset useful for evaluation in the government domain. In all, the data cover 43 African languages from five language families domiciled in 29 African countries. We also include Arabic, English, and French, since these are widely spoken in Africa. Table 2 shows the different datasets that AfroLingu-MT consists of. 
 
@@ -54,13 +50,22 @@ Our collection comprises data from a total of 43 datasets, encompassing 84 uniqu
 | 🔥**AfroLingu-MT Benchmark**🔥|     [https://huggingface.co/datasets/UBC-NLP/AfroLingu-MT](https://huggingface.co/datasets/UBC-NLP/AfroLingu-MT)
 
 
-## 2.1 spBLEU<sup>1K</sup> Metric
+## MT Models
+To create Toucan models, we finetune the Cheetah models on our AfroLingu-MT Benchmark.
+
+| **Tocan Models**   | **Link** | 
+|---------|:------------------:|    
+| 🔥**Toucan-base**🔥|     [https://huggingface.co/UBC-NLP/toucan-base](https://huggingface.co/UBC-NLP/toucan-base) 
+| 🔥**Toucan-1.2B**🔥|     [https://huggingface.co/UBC-NLP/toucan-1.2B](https://huggingface.co/UBC-NLP/toucan-1.2B)   
+ 
+
+## spBLEU<sup>1K</sup> Metric
 
 spBLEU metric covers merely 23 out of the 43 languages present in our AfroLingu-MT benchmark. To address this limitation, we adopt a methodology similar to that of Goyal et al. (2022). Namely, we develop a new SentencePiece tokenizer that utilizes 1000+ monolingual data sources. We collect monolingual data covering 1,003 languages, including 614 African languages, 53 Indigenous American languages, and the remainder spanning the most resource-rich languages world-wide. 
 
 - More details about spBLEU<sup>1K</sup> traning data and usage, [click here](https://github.com/UBC-NLP/Toucan/tree/main/spBLEU-1K)
 
-## 2.2 Results
+## Results
 we present the performance outcomes of our proposed models as well as the baseline models each evaluated independently on the AfroLingu-MT benchmark. This evaluation employs three pertinent metrics specific to machine translation. These metrics are: spBLEU_1K, SentencePiece BLEU (i.e., spBLEU) (Goyal et al., 2022), word-based Character n-gram F-score (i.e., ChrF++) (Popovi ́c, 2015b), and AfriCOMET (Wang et al., 2023). These metrics have been selected for their effectiveness in assessing the quality of machine translations from various perspectives, including lexical accuracy and fluency. 
 
 Additionally, we compare our model, Toucan-1.2B, to the Facebook’s NLLB model (Team et al.,2022; Costa-jussà et al., 2022). Again, we find Toucan-1.2B outperforming NLLB-200-1.3B by 6.96 points in spBLEU<sup>1K</sup>, as shown in Table 5.
@@ -76,7 +81,7 @@ We compare the performance of Toucan with Aya (Üstün et al., 2024). We use res
 <img src="./aya-vs-toucan.png" width="50%" height="50%" align="centre">
 </div>
 
-##  3 How to use Cheetah-1.2B model
+##  How to use Cheetah-1.2B model
 
 Below is an example for using **Cheetah-1.2B** predict masked tokens. 
 ``` bash
@@ -99,7 +104,7 @@ Cheetah-1.2B - Tokenized input: ['▁ìròyìn', '▁kan', '▁nípa', '▁owó'
 Cheetah-1.2B - Decoded output: Nàìjíríà
 ```
 
-##  3.1 How to use Toucan model
+##  How to use Toucan model
 To translate using Toucan models, use the target language ISO-3 code as preix. Below the supported langauges
 ```
 lang_names={
@@ -171,18 +176,6 @@ Output:
 ```bash
 Toucan-1.2B - translation: Susa zonke izinto kuhlu lwamadokhumende oludlule
 ```
-
-## 4. Ethics
-Toucan aligns with Afrocentric NLP where the needs of African people is put into consideration when developing technology. We believe Toucan will not only be useful to speakers of the languages supported, but also researchers of African languages such as anthropologists and linguists.
-We discuss below some use cases for Toucan and offer a number of broad impacts. 
-- Toucan aims to address the lack of access to technology in about 90% of the world's languages, which automatically discriminates against native speakers of those languages. More precisely, it does so by focusing on Africa.
-  To the best of our knowledge, Toucan is the first massively multilingual PLM developed for African languages and language varieties. A model with knowledge of <b>517 African languages</b>, is by far the largest to date for African NLP. 
-- Toucan enables improved access of important information to the African community in Indigenous African languages. This is especially beneficial for people who may not be fluent in other languages. This will potentially connect more people globally. 
-- Toucan affords opportunities for language preservation for many African languages. To the best of our knowledge, Toucan consists of languages that have not been used for any NLP task until now.
-  We believe that it can help encourage  continued use of these languages in several domains, as well as trigger future development of language technologies for many of these languages.
-- Although LMs are useful for a wide range of applications, they can also be misused. Toucan is developed using publicly available datasets that may carry biases.
-  Although we strive to perform analyses and diagnostic case studies to probe performance of our models, our investigations are by no means comprehensive nor guarantee absence of bias in the data.
-  In particular, we do not have access to native speakers of most of the languages covered. This hinders our ability to investigate samples from each (or at least the majority) of the languages.
      
 ## Supported languages
 Please refer to [**supported-languages**](https://github.com/UBC-NLP/Toucan/blob/main/supported-languages.txt)
