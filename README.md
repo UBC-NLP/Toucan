@@ -203,9 +203,9 @@ We discuss below some use cases for Toucan and offer a number of broad impacts.
   In particular, we do not have access to native speakers of most of the languages covered. This hinders our ability to investigate samples from each (or at least the majority) of the languages.
      
 ## Supported languages
-Please refer to [**supported-languages**]("https://github.com/UBC-NLP/Toucan/blob/main/supported-languages.txt")
+Please refer to [**supported-languages**](https://github.com/UBC-NLP/Toucan/blob/main/supported-languages.txt)
 
-More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah paper GitHub**]("https://github.com/UBC-NLP/Cheetah")
+More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah paper GitHub**](https://github.com/UBC-NLP/Cheetah)
 
 ## Citation
 If you use the pre-trained model (Cheetah-1.2B) for your scientific publication, or if you find the resources in this repository useful, please cite our papers as follows:
