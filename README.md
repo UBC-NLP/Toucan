@@ -24,15 +24,12 @@ We address a notable gap in Natural Language Processing (NLP) by introducing a c
 - [1 Our Language Models](#1-Our-Language-Models)
   - [1.1 Training Data](#11-training-data)
   - [1.2 Models Architecture](#12-models-architecture)
-  - [1.3 Cheetah Models](#13-cheetah-models)
-- [2. AfroNLG Benchmark and Evaluation](#2-our-benchmark-AfroNLG)
-  - [2.1 Machine Translation](#21-machine-translation)
-  - [2.2 Paraphrase](#22-paraphrase)
-  - [2.3 Question Answering](#23-question-answering)
-  - [2.4 Summarization](#24-summarization)
-  - [2.5 Title Generation](#25-title-generation)
-  - [2.6 Cloze](#26-cloze)
-- [3. How to use Cheetah model](#3-how-to-use-cheetah-model)
+  - [1.3 Models](#13-cheetah-models)
+- [2. AfroLingu-MT Benchmark](#2-our-benchmark-AfroLingu-MT)
+  - [2.1 spBLEU<sup>1K</sup> Metric](#21-spBLEU)
+  - [2.2 Results](#22-results)
+- [3. How to use Cheetah-1.2B model](#3-how-to-use-cheetah-model)
+  - [3.1 How to use Toucan model](#21-how-to-use-toucan-model)
 - [4. Ethics](#4-ethics)
 - [5. Support Languages](#5-supported-languages)
 - [6. Citation](#6-citation)
@@ -48,7 +45,7 @@ Our collection comprises data from a total of $43$ datasets, encompassing $84$ u
 ## 1.2 Model Architecture
 
 We pretrain Cheetah using the encoder-decoder architecture [(xue-etal-2021-mt5)](https://aclanthology.org/2021.naacl-main.41/). Each of the encoder and decoder components is similar in size and configuration to T5, with 12 layers each with 12 attention heads, and 768 hidden units for the base model. In total, this results in a model with ~580 million parameters. 
-## 1.3.  Cheetah Model
+## 1.3.  Models
 To effectively train a MT language model for African languages, it is crucial to start with a powerful, Afrocentric pretrained language model. For this purpose, we select Cheetah (Adebara et al.,
 2024), a recently introduced SoTA model with extensive coverage encompassing 517 African languages. One limitation of Cheetah, however, is that it is available only in a base architecture, featuring
 580M parameters. Given our objective to develop a large-scale language model for machine translation capabale of serving 156 directions, this base model does not fully meet our requirements. To address this limitation, we embark on training larger and more expansive Afrocentric sequence-to-sequence models. We focus on two sizes: one model with 1.2B parameters and another with 3.7B parameters. We refer to the new models “Cheetah-1.2B” and “Cheetah-3.7B”, respectively, to reflect their enhanced capabilities and parameter scale. These models represent a significant advancement in our efforts to improve machine
