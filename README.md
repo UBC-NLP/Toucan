@@ -188,7 +188,7 @@ If you use the pre-trained model (Cheetah-1.2B) for your scientific publication,
 **Toucan's Paper**
 ```
 @inproceedings{elmadany-etal-2024-toucan,
-    title = "Toucan: Many-to-Many Translation for 150 {A}frican Language Pairs",
+    title = "Toucan: Many-to-Many Translation for 150 African Language Pairs",
     author = "Elmadany, AbdelRahim  and
       Adebara, Ife  and
       Abdul-Mageed, Muhammad",
