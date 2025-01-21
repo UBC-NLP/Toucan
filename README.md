@@ -185,27 +185,7 @@ More details about Cheetah's pretraning data, visit Cheetah's GitHub [**Cheetah 
 ## Citation
 If you use the pre-trained model (Cheetah-1.2B) for your scientific publication, or if you find the resources in this repository useful, please cite our papers as follows:
 
-**Toucan's Paper**
-```
-@inproceedings{elmadany-etal-2024-toucan,
-    title = "Toucan: Many-to-Many Translation for 150 African Language Pairs",
-    author = "Elmadany, AbdelRahim  and
-      Adebara, Ife  and
-      Abdul-Mageed, Muhammad",
-    editor = "Ku, Lun-Wei  and
-      Martins, Andre  and
-      Srikumar, Vivek",
-    booktitle = "Findings of the Association for Computational Linguistics ACL 2024",
-    month = aug,
-    year = "2024",
-    address = "Bangkok, Thailand and virtual meeting",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.findings-acl.781",
-    pages = "13189--13206",
-}
-```
-
-**Cheetah's Paper** 
+**Cheetah's Paper**
 ```
 @inproceedings{adebara-etal-2024-cheetah,
     title = "Cheetah: Natural Language Generation for 517 {A}frican Languages",
@@ -222,6 +202,17 @@ If you use the pre-trained model (Cheetah-1.2B) for your scientific publication,
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2024.acl-long.691",
     pages = "12798--12823",
+}
+```
+
+**Toucan's Paper**
+```
+@inproceedings{elmadany2024toucan,
+  title={Toucan: Many-to-Many Translation for 150 African Language Pairs},
+  author={Elmadany, Abdelrahim and Adebara, Ife and Abdul-Mageed, Muhammad},
+  booktitle={Findings of the Association for Computational Linguistics ACL 2024},
+  pages={13189--13206},
+  year={2024}
 }
 ```
 
