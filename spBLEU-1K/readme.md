@@ -18,7 +18,7 @@ We integrate this newly created SPM into SacreBLEU, resulting in the formulation
 
 ## Getting Start
 ### Install requirments 
-🔥 Exciting news for the NLP and Machine Translation community! spBLEU-1K is now officially merged and supported in Sacrebleu! 
+🔥 🔥 Exciting news for the NLP and Machine Translation community! spBLEU-1K is now officially merged and supported in Sacrebleu 
 
 - Install Huggingface's `evaluate` library and `sacreBLEU` latest version that supports the spBLEU<sup>1K</sup> tokenizer.
 
