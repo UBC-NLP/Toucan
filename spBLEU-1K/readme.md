@@ -18,19 +18,14 @@ We integrate this newly created SPM into SacreBLEU, resulting in the formulation
 
 ## Getting Start
 ### Install requirments 
+🔥 Exciting news for the NLP and Machine Translation community! spBLEU-1K is now officially merged and supported in Sacrebleu! 
 
-- Installing the integrated version of sacreBLEU that supports the spBLEU<sup>1K</sup> tokenizer.
+- Install Huggingface's `evaluate` library and `sacreBLEU` latest version that supports the spBLEU<sup>1K</sup> tokenizer.
 
 ``` bash
-    git clone https://github.com/UBC-NLP/Toucan.git
-    cd spBLEU-1K/sacrebleu
-    pip install -e .
+    pip install git+https://github.com/mjpost/sacrebleu.git evaluate
 ```
 
-- Installing Huggingface's evaluate library.
- ``` bash
-    pip install evaluate
-```
 
 ### Scoring
 
